@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import com.game.demo.model.gameModel;
-import com.game.demo.repo.gameRepo;
+import com.game.demo.model.GameModel;
+import com.game.demo.repo.GameRepo;
 @Controller
-public class gameController {
+public class GameController {
 	@Autowired
-	gameRepo repo;
+	GameRepo repo;
 	
 	
 	int ran = (int)(100*Math.random());
@@ -38,9 +38,9 @@ public class gameController {
 
 		
 	@RequestMapping("/try")
-		public ModelAndView guess1(gameModel gameModel)
+		public ModelAndView guess1(GameModel GameModel)
 		{
-		String a = check(gameModel.getGuess());
+		String a = check(GameModel.getGuess());
 		ModelAndView mv = new ModelAndView("game.jsp");
 		System.out.println(a);
 	    mv.addObject("line",a);
