@@ -7,12 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-You win<br>
-<form action="try">
-<button formaction="save"> Save Your Game</button>
-<button formaction="/">Next Game</button>
-<button formaction="display">Scores</button>
-</form>
- ${s}
+  
+   ${
+   list[0].toString()
+   }
+   <br>
+     ${
+   list[1].toString()
+   }
+   <br>
+     ${
+   list[2].toString()
+   }
+   
+   <form action="Win">
+   <button>back</button>
+   </form>
+   <script>
+
+   </script>
 </body>
 </html>
